@@ -1,0 +1,28 @@
+{
+  "sizes": {
+    "train": 50000,
+    "valid": 5000,
+    "test": 5000
+  },
+  "caps": {
+    "train_cap": 50000,
+    "valid_cap": 5000,
+    "test_cap": 5000
+  },
+  "hyperparams": {
+    "emb_dim": 200,
+    "gru_hidden": 256,
+    "bidir": true,
+    "img_proj_dim": 512,
+    "fusion_hidden": 256,
+    "p_drop_text": 0.1,
+    "p_drop_image": 0.3,
+    "epochs": 5,
+    "batch_size": 64,
+    "lr": 0.002
+  },
+  "metrics": {
+    "test_acc": 0.7052,
+    "test_f1_macro": 0.5182101483052853
+  }
+}
