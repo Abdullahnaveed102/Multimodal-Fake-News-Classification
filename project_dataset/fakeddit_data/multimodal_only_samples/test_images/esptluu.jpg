@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="login-pf">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
+
+            <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Sign in to IceCube Neutrino Observatory</title>
+    <link rel="icon" href="/auth/resources/3r93h/login/i3_theme/img/favicon.ico" />
+            <link href="/auth/resources/3r93h/common/keycloak/vendor/patternfly-v5/patternfly.min.css" rel="stylesheet" />
+            <link href="/auth/resources/3r93h/common/keycloak/vendor/patternfly-v5/patternfly-addons.css" rel="stylesheet" />
+            <link href="/auth/resources/3r93h/login/i3_theme/css/login.css" rel="stylesheet" />
+    <script type="importmap">
+        {
+            "imports": {
+                "rfc4648": "/auth/resources/3r93h/common/keycloak/vendor/rfc4648/rfc4648.js"
+            }
+        }
+    </script>
+    <script type="module" src="/auth/resources/3r93h/login/i3_theme/js/passwordVisibility.js"></script>
+    <script type="module">
+        import { startSessionPolling } from "/auth/resources/3r93h/login/i3_theme/js/authChecker.js";
+
+        startSessionPolling(
+            "/auth/realms/IceCube/login-actions/restart?client_id=gallery&tab_id=VRtQF3cpLF0&client_data=eyJydSI6Imh0dHBzOi8vZ2FsbGVyeS5pY2VjdWJlLmFxL29hdXRoMi9jYWxsYmFjayIsInJ0IjoiY29kZSIsInN0IjoiTGZ4VDJCckZzV0tKNFBWUnpwcVp6NVR0SE51V2hERFVVM21DSVVHTS0yYzovIn0&skip_logout=true"
+        );
+
+        const DARK_MODE_CLASS = "pf-v5-theme-dark";
+        const mediaQuery =window.matchMedia("(prefers-color-scheme: dark)");
+        updateDarkMode(mediaQuery.matches);
+        mediaQuery.addEventListener("change", (event) =>
+          updateDarkMode(event.matches),
+        );
+        function updateDarkMode(isEnabled) {
+          const { classList } = document.documentElement;
+          if (isEnabled) {
+            classList.add(DARK_MODE_CLASS);
+          } else {
+            classList.remove(DARK_MODE_CLASS);
+          }
+        }
+    </script>
+</head>
+
+<body id="keycloak-bg" class="">
+
+<div class="pf-v5-c-login">
+  <div class="pf-v5-c-login__container">
+    <header id="kc-header" class="pf-v5-c-login__header">
+      <div id="kc-header-wrapper"
+              class="pf-v5-c-brand">IceCube Neutrino Observatory</div>
+    </header>
+    <main class="pf-v5-c-login__main">
+      <div class="pf-v5-c-login__main-header">
+        <h1 class="pf-v5-c-title pf-m-3xl" id="kc-page-title"><!-- template: login.ftl -->
+
+        Sign in to your account
+
+</h1>
+      </div>
+      <div class="pf-v5-c-login__main-body">
+
+
+<!-- template: login.ftl -->
+
+        <div id="kc-form">
+          <div id="kc-form-wrapper">
+                <form id="kc-form-login" class="pf-v5-c-form" onsubmit="login.disabled = true; return true;" action="https://keycloak.icecube.wisc.edu/auth/realms/IceCube/login-actions/authenticate?session_code=A5wf_SFwzS3ePsM5Rp2BEvxvCuDBMUMbIXoU4UrnGek&amp;execution=aaa7ffe2-8cf8-4f1d-84c6-025be100b668&amp;client_id=gallery&amp;tab_id=VRtQF3cpLF0&amp;client_data=eyJydSI6Imh0dHBzOi8vZ2FsbGVyeS5pY2VjdWJlLmFxL29hdXRoMi9jYWxsYmFjayIsInJ0IjoiY29kZSIsInN0IjoiTGZ4VDJCckZzV0tKNFBWUnpwcVp6NVR0SE51V2hERFVVM21DSVVHTS0yYzovIn0" method="post" novalidate="novalidate">
+
+<div class="pf-v5-c-form__group">
+  <div class="pf-v5-c-form__label">
+    <label for="username" class="pf-v5-c-form__label">
+        <span class="pf-v5-c-form__label-text">
+                                      Username
+
+        </span>
+    </label>
+  </div>
+
+    <span class="pf-v5-c-form-control ">
+        <input id="username" name="username" value="" type="text" autocomplete="username" autofocus
+                aria-invalid=""/>
+    </span>
+
+  <div id="input-error-client-username"></div>
+</div>
+
+
+
+<div class="pf-v5-c-form__group">
+  <div class="pf-v5-c-form__label">
+    <label for="password" class="pf-v5-c-form__label">
+        <span class="pf-v5-c-form__label-text">
+          Password
+        </span>
+    </label>
+  </div>
+
+    <div class="pf-v5-c-input-group">
+      <div class="pf-v5-c-input-group__item pf-m-fill">
+        <span class="pf-v5-c-form-control ">
+          <input id="password" name="password" value="" type="password" autocomplete="current-password" 
+                  aria-invalid=""/>
+        </span>
+      </div>
+      <div class="pf-v5-c-input-group__item">
+        <button class="pf-v5-c-button pf-m-control" type="button" aria-label="Show password"
+                aria-controls="password" data-password-toggle
+                data-icon-show="fa-eye fas" data-icon-hide="fa-eye-slash fas"
+                data-label-show="Show password" data-label-hide="Hide password">
+            <i class="fa-eye fas" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+        <div class="pf-v5-c-form__helper-text" aria-live="polite">
+            <div class="pf-v5-c-helper-text">
+                <div class="pf-v5-c-helper-text__item">
+                    <span class="pf-v5-c-helper-text__item-text">
+                        <a href="/auth/realms/IceCube/login-actions/reset-credentials?client_id=gallery&amp;tab_id=VRtQF3cpLF0&amp;client_data=eyJydSI6Imh0dHBzOi8vZ2FsbGVyeS5pY2VjdWJlLmFxL29hdXRoMi9jYWxsYmFjayIsInJ0IjoiY29kZSIsInN0IjoiTGZ4VDJCckZzV0tKNFBWUnpwcVp6NVR0SE51V2hERFVVM21DSVVHTS0yYzovIn0">Forgot Password?</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+  <div id="input-error-client-password"></div>
+</div>
+
+
+                    <div class="pf-v5-c-form__group">
+                    </div>
+
+                    <input type="hidden" id="id-hidden-input" name="credentialId" />
+  <div class="pf-v5-c-form__group">
+    <div class="pf-v5-c-form__actions">
+  <button class="pf-v5-c-button pf-m-primary pf-m-block " name="login" id="kc-login" type="submit">Sign In</button>
+    </div>
+  </div>
+                </form>
+            </div>
+        </div>
+
+
+
+      </div>
+      <div class="pf-v5-c-login__main-footer">
+<!-- template: login.ftl -->
+
+
+      </div>
+    </main>
+
+  </div>
+</div>
+</body>
+</html>

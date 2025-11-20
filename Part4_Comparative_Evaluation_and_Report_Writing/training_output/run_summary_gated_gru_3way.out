@@ -1,0 +1,37 @@
+Perf knobs set.
+Tue Nov 18 22:18:00 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.148.08             Driver Version: 570.148.08     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA B200                    On  |   00000000:C3:00.0 Off |                    0 |
+| N/A   23C    P0            139W / 1000W |       0MiB / 183359MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Python 3.10.19
+/blue/liguanpeng/abdullahnaveed/.conda/envs/llm_ft_new/bin/python
+Sizes -> train 50000 | valid 5000 | test 5000
+[Epoch 01] train: loss 0.5674 acc 0.7423 prec 0.7167 rec 0.6022 f1 0.6394 | valid: loss 0.4684 acc 0.7954 prec 0.7369 rec 0.7463 f1 0.7385
+[Epoch 02] train: loss 0.4204 acc 0.8146 prec 0.8174 rec 0.7356 f1 0.7692 | valid: loss 0.4366 acc 0.8158 prec 0.7816 rec 0.7496 f1 0.7640
+[Epoch 03] train: loss 0.3159 acc 0.8655 prec 0.8744 rec 0.8144 f1 0.8408 | valid: loss 0.5053 acc 0.8176 prec 0.7552 rec 0.7180 f1 0.7342
+[Epoch 04] train: loss 0.2335 acc 0.8994 prec 0.9137 rec 0.8683 f1 0.8890 | valid: loss 0.5876 acc 0.8176 prec 0.7908 rec 0.7308 f1 0.7566
+[Epoch 05] train: loss 0.1768 acc 0.9205 prec 0.9352 rec 0.8929 f1 0.9123 | valid: loss 0.7440 acc 0.8070 prec 0.7795 rec 0.7308 f1 0.7519
+[Epoch 06] train: loss 0.1460 acc 0.9353 prec 0.9496 rec 0.9046 f1 0.9251 | valid: loss 0.7811 acc 0.8054 prec 0.7431 rec 0.7125 f1 0.7265
+[Epoch 07] train: loss 0.1296 acc 0.9385 prec 0.9570 rec 0.9210 f1 0.9376 | valid: loss 0.9737 acc 0.8092 prec 0.7833 rec 0.7272 f1 0.7514
+[Epoch 08] train: loss 0.1223 acc 0.9441 prec 0.9576 rec 0.9139 f1 0.9339 | valid: loss 1.0559 acc 0.8062 prec 0.7472 rec 0.7164 f1 0.7305
+[Epoch 09] train: loss 0.1157 acc 0.9436 prec 0.9582 rec 0.9152 f1 0.9349 | valid: loss 1.0506 acc 0.8076 prec 0.7717 rec 0.7172 f1 0.7400
+[Epoch 10] train: loss 0.1159 acc 0.9429 prec 0.9554 rec 0.9157 f1 0.9340 | valid: loss 1.0759 acc 0.7966 prec 0.7518 rec 0.7376 f1 0.7439
+[TEST] loss 0.4447 | acc 0.8128 | prec 0.7769 | rec 0.7276 | f1 0.7489
+[saved] weights + summary to training_output
+<======== DONE ========>

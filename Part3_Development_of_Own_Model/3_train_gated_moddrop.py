@@ -34,7 +34,7 @@ PIN_MEMORY = True if DEVICE == "cuda" else False
 DATA_ROOT      = "../../project_dataset/fakeddit_data/multimodal_only_samples"
 PREPARED_DIR   = "prepared_data"
 ######################################################################################### 
-TEXT_SUBDIR    = "text_proc_6way"                                            # <========= CHANGE THIS
+TEXT_SUBDIR    = "text_proc_2way"                                            # <========= CHANGE THIS
 
 # Files produced by script #1
 TRAIN_USED_CSV = "train_used.csv"
@@ -69,7 +69,7 @@ P_DROP_IMAGE   = 0.30
 
 # Training
 #########################################################################################
-NUM_CLASSES    = 6            # must match meta['label_col'] mapping         # <========= CHANGE THIS
+NUM_CLASSES    = 2            # must match meta['label_col'] mapping         # <========= CHANGE THIS
 EPOCHS         = 5
 BATCH_SIZE     = 64
 LR             = 2e-3
@@ -89,7 +89,7 @@ class FusionDataset(Dataset):
             self.df = self.df.iloc[:cap].copy()
             self.seq = self.seq[:cap]
         ######################################################################################### labels
-        self.labels = self.df["6_way_label"].astype(int).to_numpy()                  # <========= CHANGE THIS
+        self.labels = self.df["2_way_label"].astype(int).to_numpy()                  # <========= CHANGE THIS
         # images
         self.has_img = (self.df.get("hasImage", "FALSE") == "TRUE").to_numpy()
         self.img_paths = self.df.get("image_path", "").astype(str).to_numpy()
@@ -293,7 +293,7 @@ def main():
     # Save artifacts
     out_dir = Path(DATA_ROOT) / PREPARED_DIR
     ######################################################################################### Output file name
-    torch.save(model.state_dict(), out_dir / "gated_gru_resnet_best_6way.pt")     #<========= CHANGE THIS
+    torch.save(model.state_dict(), out_dir / "gated_gru_resnet_best_2way.pt")     #<========= CHANGE THIS
     summary = {
         "sizes": {"train": len(tr), "valid": len(va), "test": len(te)},
         "caps": {"train_cap": TRAIN_CAP, "valid_cap": VALID_CAP, "test_cap": TEST_CAP},
@@ -306,7 +306,7 @@ def main():
         "metrics": {"test_acc": te_acc, "test_f1_macro": te_f1}
     }
     ######################################################################################### Output file name
-    (out_dir / "run_summary_gated_gru_6way.json").write_text(json.dumps(summary, indent=2)) #<========= CHANGE THIS
+    (out_dir / "run_summary_gated_gru_2way.json").write_text(json.dumps(summary, indent=2)) #<========= CHANGE THIS
     print(f"[saved] weights + summary to {out_dir}")
 
 if __name__ == "__main__":

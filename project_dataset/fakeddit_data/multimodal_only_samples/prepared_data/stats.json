@@ -1,0 +1,19 @@
+{
+  "caps": {
+    "TEXT_CAP_TRAIN": 100000,
+    "TEXT_CAP_VALID": 10000,
+    "TEXT_CAP_TEST": 10000
+  },
+  "counts": {
+    "train_total": 100000,
+    "train_paired": 19815,
+    "train_textonly": 80185,
+    "valid_total": 10000,
+    "valid_paired": 1993,
+    "valid_textonly": 8007,
+    "test_total": 10000,
+    "test_paired": 1988,
+    "test_textonly": 8012
+  },
+  "notes": "image_path is relative (e.g., 'train_images/abc123.jpg'). No image preprocessing performed."
+}

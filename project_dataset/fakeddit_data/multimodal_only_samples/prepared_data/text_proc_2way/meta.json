@@ -1,0 +1,10 @@
+{
+  "vocab_cap": 120000,
+  "actual_vocab_size": 50168,
+  "seq_len": 15,
+  "label_col": "2_way_label",
+  "n_train": 100000,
+  "n_valid": 10000,
+  "n_test": 10000,
+  "use_nltk": true
+}

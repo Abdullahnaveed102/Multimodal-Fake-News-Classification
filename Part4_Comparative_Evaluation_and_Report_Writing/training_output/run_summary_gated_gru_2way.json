@@ -1,0 +1,31 @@
+{
+  "sizes": {
+    "train": 50000,
+    "valid": 5000,
+    "test": 5000
+  },
+  "caps": {
+    "train_cap": 50000,
+    "valid_cap": 5000,
+    "test_cap": 5000
+  },
+  "hyperparams": {
+    "emb_dim": 200,
+    "gru_hidden": 256,
+    "bidir": true,
+    "img_proj_dim": 512,
+    "fusion_hidden": 256,
+    "p_drop_text": 0.1,
+    "p_drop_image": 0.3,
+    "epochs": 10,
+    "batch_size": 64,
+    "lr": 0.002
+  },
+  "metrics": {
+    "test_loss": 0.45296688289642334,
+    "test_acc": 0.828,
+    "test_precision": 0.8282719695176544,
+    "test_recall": 0.808190897327192,
+    "test_f1_macro": 0.8151979805522951
+  }
+}

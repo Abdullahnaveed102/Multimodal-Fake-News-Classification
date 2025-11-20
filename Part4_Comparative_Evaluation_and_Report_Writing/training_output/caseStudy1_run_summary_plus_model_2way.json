@@ -1,0 +1,20 @@
+{
+  "sizes": {
+    "train": 50000,
+    "valid": 5000,
+    "test": 5000
+  },
+  "metrics": {
+    "test_loss": 0.4251536999702454,
+    "test_acc": 0.8344,
+    "test_precision": 0.8279102954823425,
+    "test_recall": 0.8244249485715489,
+    "test_f1": 0.8260415322060153
+  },
+  "notes": [
+    "This model includes 3 improvements:",
+    "1) Cross-Modal Attention (CMA)",
+    "2) GRU + Self-Attention",
+    "3) Bottleneck projection for text/image"
+  ]
+}

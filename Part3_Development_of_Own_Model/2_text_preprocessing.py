@@ -40,7 +40,7 @@ INPUT_VALID  = "valid_final.csv"
 INPUT_TEST   = "test_final.csv"
 
 ######################################################################################### Label column
-LABEL_COL    = "6_way_label"   # "2_way_label" | "3_way_label" | "6_way_label" <========= CHANGE THIS
+LABEL_COL    = "2_way_label"   # "2_way_label" | "3_way_label" | "6_way_label" <========= CHANGE THIS
 
 # Row caps (-1 = use all)
 TRAIN_CAP    = -1
@@ -53,7 +53,7 @@ SEQ_LEN      = 15
 LOWERCASE    = True
 
 ######################################################################################### Output dir for preprocessed text items
-OUT_SUBDIR   = "text_proc_6way" #                                              <========= CHANGE THIS
+OUT_SUBDIR   = "text_proc_2way" #                                              <========= CHANGE THIS
 
 #########################################
 ########################## Utilities
